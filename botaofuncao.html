@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+
+  </head>
+  <body>
+    <div id="click-count"></div>
+    <style>
+      .button {
+        background-color: #4CAF50; /* Green */
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+      }
+
+      .button.active,
+      .button2.button.active {
+        background-color: #3e8e41;
+      }
+  #click-count {
+    font-size: 20px;
+            }
+    </style>
+    <p>Diversão </p>
+    <button class="button" id="button">Instagram</button>
+    <button class="button" id="button">Facebook</button>
+    <button class="button" id="button">Twitter</button>
+    <button class="button" id="button">Tiktok</button>
+    <p>Projeto</p>
+    <button class="button" id="button">Instagram</button>
+    <button class="button" id="button">Facebook</button>
+    <button class="button" id="button">Site</button>
+    <p>Dev</p>
+    <button class="button" id="button">Google play</button>
+    <button class="button" id="button">Frelancer</button>
+    <button class="button" id="button">Udemy</button>
+
+    <script>
+      const buttons = document.querySelectorAll('.button');
+      buttons.forEach(function(button) {
+        button.addEventListener('click', function() {
+          this.classList.toggle('active');
+        });
+      });
+    </script>
+    <script>
+        let count = 0;
+        const button = document.getElementById('button');
+        const countContainer = document.getElementById('click-count');
+        button.addEventListener('click', () => {
+          count += 1;
+          countContainer.innerHTML = `Botão Clicado ${count} vezes`;
+        });
+      </script>
+      
+  </body>
+</html>
